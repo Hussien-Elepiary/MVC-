@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    @*Start Header*@
+    <nav class="mt-5">
+        <center>
+            @*
+                1. Html Tag
+
+                <a href="/Home/Index" class="btn btn-primary">Home</a>
+            *@
+
+            @*
+                2.Html Helpers 
+                is a way to generate Html Tags useing C# 
+                like the Following
+
+                @Html.ActionLink(Name,ActionName,ControlName,Paramater Values,Classes and Attre Values);
+
+                @Html.ActionLink("Home with HTML Helper","Index","Home",null,new {@Class = "btn btn-primary"})
+            *@
+            
+            @*
+                3.Tag Helpers
+            *@
+
+            <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Home</a>
+            <a asp-controller="Home" asp-action="AboutUs" class="btn btn-primary">AboutUs</a>
+            <a asp-controller="Home" asp-action="Privacy" class="btn btn-primary">Privacy</a>
+            <a asp-controller="Home" asp-action="ContactUs" class="btn btn-primary">ContactUs</a>
+            <a asp-controller="Account" asp-action="LogIn" class="btn btn-primary">LogIn</a>
+            <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Register</a>
+
+        </center>
+    </nav>
+    @*End Header*@
+
+    @*Start Body*@
+    <div>
+        @RenderBody()
+    </div>
+    @*End Body*@
+
+    @*Start Footer*@
+    <footer class="mt-5">
+        <center>
+            <h3>CopyRights &copy; Hussein @DateTime.Now.Year </h3>
+        </center>
+    </footer>
+    @*End Footer*@
+
+</body>
+</html>

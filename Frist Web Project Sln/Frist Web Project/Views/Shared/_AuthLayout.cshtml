@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    @*Start Header*@
+    <nav class="mt-5">
+        <center>
+            <a asp-controller="Account" asp-action="LogIn" class="btn btn-primary">LogIn</a>
+            <a asp-controller="Account" asp-action="Register" class="btn btn-primary">Register</a>
+        </center>
+    </nav>
+    @*End Header*@
+
+    @*Start Body*@
+    <div>
+        @RenderBody()
+    </div>
+    @*End Body*@
+
+    @*Start Footer*@
+    <footer class="mt-5">
+        <center>
+            <h3>CopyRights &copy; Hussein @DateTime.Now.Year </h3>
+        </center>
+    </footer>
+    @*End Footer*@
+
+</body>
+</html>

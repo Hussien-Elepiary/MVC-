@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Frist Web Project.props" />
+</Project>

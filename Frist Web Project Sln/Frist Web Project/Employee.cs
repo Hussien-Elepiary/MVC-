@@ -1,0 +1,8 @@
+﻿namespace Frist_Web_Project
+{
+    public class Employee
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
+}
